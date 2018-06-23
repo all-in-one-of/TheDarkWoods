@@ -35,5 +35,12 @@ public:
 
 	// Components
 	UPROPERTY(EditDefaultsOnly)
-	USpringArmComponent* springArm;
+	USpringArmComponent* SpringArm;
+	UPROPERTY(EditDefaultsOnly)
+	UCameraComponent* Camera;
+
+	// Movement
+	void MoveForward(float AxisValue);
+	void MoveRight(float AxisValue);
+	void TurnRight(float AxisValue);
 };
