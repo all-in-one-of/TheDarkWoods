@@ -10,7 +10,7 @@ ACPP_Player::ACPP_Player()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Use a spring arm for smooth movement
-	springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+	springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraArm"));
 	springArm->SetupAttachment(RootComponent);
 	springArm->RelativeRotation = FRotator(-45.0f, 0.0f, 0.0f);
 	springArm->TargetArmLength = 400.0f;
@@ -23,6 +23,7 @@ ACPP_Player::ACPP_Player()
 
 	// Take control of the player
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
+	AutoReceiveInput = EAutoReceiveInput::Player0;
 }
 
 // Called when the game starts or when spawned
