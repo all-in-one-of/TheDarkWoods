@@ -4,7 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+
+//camera includes
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
+
+
 #include "CPP_Player.generated.h"
+
 
 UCLASS()
 class THEDARKWOODS_API ACPP_Player : public ACharacter
@@ -25,7 +32,4 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	
-	
 };
