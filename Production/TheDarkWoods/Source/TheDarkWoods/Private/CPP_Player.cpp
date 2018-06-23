@@ -10,7 +10,7 @@ ACPP_Player::ACPP_Player()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Use a spring arm for smooth movement
-	USpringArmComponent* springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraArm"));
+	springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	springArm->SetupAttachment(RootComponent);
 	springArm->RelativeRotation = FRotator(-45.0f, 0.0f, 0.0f);
 	springArm->TargetArmLength = 400.0f;
