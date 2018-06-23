@@ -1,0 +1,17 @@
+To Do on The Dark Woods:
+
+	Custom eye system
+		- Animatable
+		- Bones
+		- Material instancing
+		- Flipbook (cartoony)
+		
+	Slime
+		- Eyes
+		- Distortion shader
+		- Raymarch inside?
+	
+	Master cel shader
+		- Bottom lit
+		- Top lit
+		- Fresnel (optional)
