@@ -44,6 +44,10 @@ void ACPP_Player::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	// Bind inputs
+	InputComponent->BindAxis("MoveForward", this, &ACPP_Player::MoveForward);
+	InputComponent->BindAxis("MoveRight", this, &ACPP_Player::MoveRight);
+	InputComponent->BindAxis("TurnRight", this, &ACPP_Player::TurnRight);
 }
 
 void ACPP_Player::MoveForward(float AxisValue)
