@@ -48,6 +48,7 @@ void ACPP_Player::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	InputComponent->BindAxis("MoveForward", this, &ACPP_Player::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ACPP_Player::MoveRight);
 	InputComponent->BindAxis("TurnRight", this, &ACPP_Player::TurnRight);
+	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ACPP_Player::Jump);
 }
 
 void ACPP_Player::MoveForward(float AxisValue)
@@ -65,4 +66,9 @@ void ACPP_Player::TurnRight(float AxisValue)
 	FRotator NewRotation = GetActorRotation();
 	NewRotation.Yaw += AxisValue;
 	SetActorRotation(NewRotation);
+}
+
+void ACPP_Player::Jump()
+{
+	ACharacter::Jump();
 }

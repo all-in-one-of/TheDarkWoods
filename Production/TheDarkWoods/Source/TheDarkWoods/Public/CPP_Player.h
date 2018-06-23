@@ -43,4 +43,5 @@ public:
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
 	void TurnRight(float AxisValue);
+	void Jump();
 };
