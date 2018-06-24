@@ -8,9 +8,9 @@ To Do on The Dark Woods:
 		- Flipbook (cartoony)
 		
 	Slime
-		- Eyes with flipbook
-			- Generic flipbook? ^^ @@ and anime-like eyes
-		
-		
-		- Distortion shader
+		- Distance mesh field to spread across surfaces
 		- Raymarch inside?
+		
+		eyes
+			- billboard
+			- offset in front of mesh
