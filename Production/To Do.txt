@@ -10,7 +10,6 @@ To Do on The Dark Woods:
 	Slime
 		- Distance mesh field to spread across surfaces
 		- Raymarch inside?
-		
-		eyes
-			- billboard
-			- offset in front of mesh
+			
+	terrain material blending
+		- PIXEL FUCKING DEPTH
