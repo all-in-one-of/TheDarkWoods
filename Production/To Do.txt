@@ -2,16 +2,12 @@ To Do on The Dark Woods:
 
 	Custom eye system
 		- Animatable
+		- Generated through Substance Designer & atlased
 		- Bones
 		- Material instancing
 		- Flipbook (cartoony)
 		
 	Slime
-		- Eyes
+		- Eyes with flipbook
 		- Distortion shader
 		- Raymarch inside?
-	
-	Master cel shader
-		- Bottom lit
-		- Top lit
-		- Fresnel (optional)
