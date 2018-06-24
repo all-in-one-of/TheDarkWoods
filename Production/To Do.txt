@@ -9,5 +9,8 @@ To Do on The Dark Woods:
 		
 	Slime
 		- Eyes with flipbook
+			- Generic flipbook? ^^ @@ and anime-like eyes
+		
+		
 		- Distortion shader
 		- Raymarch inside?
