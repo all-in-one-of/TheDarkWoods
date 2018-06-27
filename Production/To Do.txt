@@ -1,0 +1,15 @@
+To Do on The Dark Woods:
+
+	Custom eye system
+		- Animatable
+		- Generated through Substance Designer & atlased
+		- Bones
+		- Material instancing
+		- Flipbook (cartoony)
+		
+	Slime
+		- Distance mesh field to spread across surfaces
+		- Raymarch inside?
+			
+	terrain material blending
+		- PIXEL FUCKING DEPTH
