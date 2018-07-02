@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 
-//camera includes
+// Camera includes
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 
@@ -32,4 +32,16 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	// Components
+	UPROPERTY(EditDefaultsOnly)
+	USpringArmComponent* SpringArm;
+	UPROPERTY(EditDefaultsOnly)
+	UCameraComponent* Camera;
+
+	// Movement
+	void MoveForward(float AxisValue);
+	void MoveRight(float AxisValue);
+	void TurnRight(float AxisValue);
+	void Jump();
 };

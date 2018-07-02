@@ -10,19 +10,20 @@ ACPP_Player::ACPP_Player()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Use a spring arm for smooth movement
-	USpringArmComponent* springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraArm"));
-	springArm->SetupAttachment(RootComponent);
-	springArm->RelativeRotation = FRotator(-45.0f, 0.0f, 0.0f);
-	springArm->TargetArmLength = 400.0f;
-	springArm->bEnableCameraLag = true;
-	springArm->CameraLagSpeed = 3.0f;
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraArm"));
+	SpringArm->SetupAttachment(RootComponent);
+	SpringArm->RelativeRotation = FRotator(-45.0f, 0.0f, 0.0f);
+	SpringArm->TargetArmLength = 400.0f;
+	SpringArm->bEnableCameraLag = true;
+	SpringArm->CameraLagSpeed = 3.0f;
 
 	// Set up a camera and attach to spring arm
-	UCameraComponent* camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	camera->SetupAttachment(springArm, USpringArmComponent::SocketName);
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 
 	// Take control of the player
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
+	AutoReceiveInput = EAutoReceiveInput::Player0;
 }
 
 // Called when the game starts or when spawned
@@ -36,7 +37,6 @@ void ACPP_Player::BeginPlay()
 void ACPP_Player::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -44,5 +44,31 @@ void ACPP_Player::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	// Bind inputs
+	InputComponent->BindAxis("MoveForward", this, &ACPP_Player::MoveForward);
+	InputComponent->BindAxis("MoveRight", this, &ACPP_Player::MoveRight);
+	InputComponent->BindAxis("TurnRight", this, &ACPP_Player::TurnRight);
+	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ACPP_Player::Jump);
 }
 
+void ACPP_Player::MoveForward(float AxisValue)
+{
+	AddMovementInput(GetActorForwardVector() * AxisValue);
+}
+
+void ACPP_Player::MoveRight(float AxisValue)
+{
+	AddMovementInput(GetActorRightVector() * AxisValue);
+}
+
+void ACPP_Player::TurnRight(float AxisValue)
+{
+	FRotator NewRotation = GetActorRotation();
+	NewRotation.Yaw += AxisValue;
+	SetActorRotation(NewRotation);
+}
+
+void ACPP_Player::Jump()
+{
+	ACharacter::Jump();
+}
