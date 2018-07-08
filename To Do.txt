@@ -8,3 +8,7 @@ Simplify foliage with nice gradienting like Breath of the Wild?
 Water shader (waterfall)
 
 Rock>grass platforms - how to achieve edge blending?
+
+Sound - material system
+
+Wind - add period to lerp between noises for gusts of wind
