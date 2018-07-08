@@ -6,3 +6,5 @@ Tree leaves
 Simplify foliage with nice gradienting like Breath of the Wild?
 
 Water shader (waterfall)
+
+Rock>grass platforms - how to achieve edge blending?
