@@ -1,10 +1,6 @@
 To Do:
 
-Make landscape shader
-Simplify textures (grass, moss, bark) - look at Windwaker
 Tree leaves
-Simplify foliage with nice gradienting like Breath of the Wild?
-
 Water shader (waterfall)
-
 Rock>grass platforms - how to achieve edge blending?
+Sound - material system
