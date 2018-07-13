@@ -3,3 +3,6 @@ Type:Static
 Guid:C7190CF4-4E7A-8FC8-F7D6-C193FCA429A4
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/Assets/BP_SplineDecorator.BP_SplineDecorator
+/Game/Assets/BP_SplinePath.BP_SplinePath
+/Game/Assets/BP_SplineTree.BP_SplineTree
